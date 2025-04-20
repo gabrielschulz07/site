@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schulz Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      /* Animação 3D dos cards */
+      .card-3d {
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        transform-style: preserve-3d;
+      }
+      .card-3d:hover {
+        transform: perspective(1000px) rotateY(8deg) rotateX(8deg) scale(1.06);
+        box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4), 0 0 12px rgba(0, 242, 255, 0.3);
+      }
+
+      /* Borda RGB animada */
+      .rgb-border {
+        border: 2px solid transparent;
+        background-image: linear-gradient(#1a1a2e, #1a1a2e),
+          linear-gradient(120deg, #8a2be2, #00f2ff, #8a2be2);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        animation: rgb-border 6s linear infinite;
+      }
+
+      @keyframes rgb-border {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-sans">
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-6 py-5 max-w-7xl mx-auto">
+      <h1 class="text-3xl font-extrabold tracking-tight">
+        Schulz <span class="text-blue-500">Future</span>
+      </h1>
+      <ul class="flex items-center space-x-6 text-white/80 text-sm md:text-base">
+        <li><a href="index.html" class="hover:text-white transition">Início</a></li>
+        <li><a href="sobre.html" class="hover:text-white transition">Sobre</a></li>
+        <li><a href="servicos.html" class="hover:text-white transition">Serviços</a></li>
+        <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
+        <li>
+          <a href="contato.html" class="border border-white/30 px-4 py-1.5 rounded-md hover:bg-white/10 transition">
+            Contato
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="text-center py-24 px-4">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6 animate-pulse leading-tight">
+        Criamos Experiências Digitais
+      </h2>
+      <p class="text-white/70 max-w-2xl mx-auto mb-8 text-base md:text-lg">
+        Design de sites profissionais, identidade visual, redes sociais, branding e estratégias digitais para levar sua marca ao próximo nível.
+      </p>
+      <a href="contato.html" class="inline-block px-8 py-3 border-2 border-blue-500 rounded-md text-white hover:bg-blue-500 transition font-medium text-base">
+        Solicitar Orçamento
+      </a>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="bg-[#1a1a2e] py-20 px-6">
+      <div class="max-w-7xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <div class="bg-white/5 p-8 rounded-xl text-center hover:scale-105 transition shadow-md">
+          <span class="material-icons text-4xl mb-3 text-blue-400">support_agent</span>
+          <h4 class="text-xl font-semibold mb-2">Atendimento Personalizado</h4>
+          <p class="text-white/60">Soluções sob medida para cada tipo de cliente e objetivo.</p>
+        </div>
+        <div class="bg-white/5 p-8 rounded-xl text-center hover:scale-105 transition shadow-md">
+          <span class="material-icons text-4xl mb-3 text-blue-400">update</span>
+          <h4 class="text-xl font-semibold mb-2">Tecnologia Atualizada</h4>
+          <p class="text-white/60">Trabalhamos com as ferramentas mais modernas do mercado.</p>
+        </div>
+        <div class="bg-white/5 p-8 rounded-xl text-center hover:scale-105 transition shadow-md">
+          <span class="material-icons text-4xl mb-3 text-blue-400">alarm_on</span>
+          <h4 class="text-xl font-semibold mb-2">Entrega Ágil e de Qualidade</h4>
+          <p class="text-white/60">Compromisso com prazos sem abrir mão da excelência.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="px-6 py-24 max-w-7xl mx-auto">
+      <h3 class="text-3xl md:text-4xl font-bold mb-14 text-center">Nossos Serviços</h3>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <!-- Repetição dos cards de serviço -->
+        <div class="bg-white/5 p-6 rounded-xl text-center card-3d rgb-border">
+          <span class="material-icons text-4xl mb-3 text-white/80">desktop_windows</span>
+          <h4 class="font-bold text-lg mb-2">Sites Responsivos</h4>
+          <p class="text-white/60 text-sm">Desenvolvimento de sites rápidos, seguros e adaptáveis.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl text-center card-3d rgb-border">
+          <span class="material-icons text-4xl mb-3 text-white/80">brush</span>
+          <h4 class="font-bold text-lg mb-2">Design Gráfico</h4>
+          <p class="text-white/60 text-sm">Artes impactantes, logotipos e identidade visual completa.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl text-center card-3d rgb-border">
+          <span class="material-icons text-4xl mb-3 text-white/80">smartphone</span>
+          <h4 class="font-bold text-lg mb-2">Redes Sociais</h4>
+          <p class="text-white/60 text-sm">Gestão estratégica de conteúdo para redes sociais.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl text-center card-3d rgb-border">
+          <span class="material-icons text-4xl mb-3 text-white/80">bar_chart</span>
+          <h4 class="font-bold text-lg mb-2">Funis de Vendas</h4>
+          <p class="text-white/60 text-sm">Criação de estruturas que aumentam conversão.</p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-xl text-center card-3d rgb-border">
+          <span class="material-icons text-4xl mb-3 text-white/80">lightbulb</span>
+          <h4 class="font-bold text-lg mb-2">Branding</h4>
+          <p class="text-white/60 text-sm">Construção e posicionamento de marca memorável.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f0c29] text-center text-sm py-6 border-t border-white/10">
+      <p class="text-white/50">© 2025 Schulz Future. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
